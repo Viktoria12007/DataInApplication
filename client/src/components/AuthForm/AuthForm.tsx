@@ -4,8 +4,10 @@ import { RegisterForm } from "../RegisterForm";
 
 import "./AuthForm.css";
 
+type AuthType = "auth" | "register";
+
 export const AuthForm = () => {
-  const [authType, setAuthType] = useState<string>("register");
+  const [authType, setAuthType] = useState<AuthType>("register");
 
   const handleClick = () => {
     setAuthType((prevState) =>
