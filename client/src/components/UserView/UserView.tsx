@@ -1,8 +1,10 @@
 import "./UserView.css";
 
-export const UserView = () => {
-  const username = "Firstname Lastname";
+type IUserView = {
+    username: string,
+};
 
+export const UserView = ({ username }: IUserView) => {
   return (
     <div className="user-view">
       <div className="user-view__logo">
