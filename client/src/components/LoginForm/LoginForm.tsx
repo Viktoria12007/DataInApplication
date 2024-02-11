@@ -12,6 +12,9 @@ export const LoginForm: FC = () => {
 
     const loginMutation = useMutation({
         mutationFn: () => loginUser(email, password),
+        onSuccess: () => {
+            queryClient.invalidateQueries({ queryKey: ["me"] });
+        },
     }, queryClient);
 
     function handleSubmit(e: FormEvent) {
