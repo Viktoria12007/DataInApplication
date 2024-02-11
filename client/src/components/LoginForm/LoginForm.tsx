@@ -27,6 +27,7 @@ export const LoginForm: FC = () => {
       <FormField label="Пароль">
         <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" />
       </FormField>
+      {loginMutation.error && <span>{loginMutation.error.message}</span>}
       <Button type="submit" isLoading={loginMutation.isPending}>Войти</Button>
     </form>
   );

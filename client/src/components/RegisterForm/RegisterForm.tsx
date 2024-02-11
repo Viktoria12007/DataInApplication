@@ -31,6 +31,7 @@ export const RegisterForm: FC = () => {
       <FormField label="Пароль">
         <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" />
       </FormField>
+      {registerMutation.error && <span>{registerMutation.error.message}</span>}
       <Button type="submit" isLoading={registerMutation.isPending}>Зарегистрироваться</Button>
     </form>
   );
