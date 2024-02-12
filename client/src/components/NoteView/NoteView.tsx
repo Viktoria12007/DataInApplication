@@ -26,7 +26,7 @@ export const NoteView: FC<NoteViewProps> = ({ note }) => {
       </div>
 
       <p className="note-view__text">
-        { note.text.repeat(10) }
+        { note.text }
       </p>
     </div>
   );
