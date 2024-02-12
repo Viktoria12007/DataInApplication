@@ -5,10 +5,10 @@ import {Layout} from "../Layout";
 import {Loader} from "../Loader";
 import {AuthForm} from "../AuthForm";
 import {NoteForm} from "../NoteForm";
-import {NotesListView} from "../NotesListView";
 import {FC} from "react";
 import {LogoutButton} from "../LogoutButton";
 import {UserView} from "../UserView";
+import {FetchNotesListView} from "../NotesListView/FetchNotesListView";
 
 export const Account: FC = () => {
     const accountQuery = useQuery({
@@ -18,15 +18,15 @@ export const Account: FC = () => {
 
     switch(accountQuery.status) {
         case "pending":
-            return <Loader/>
+            return <Loader />
         case "success":
             return <Layout>
-                    <UserView username={accountQuery.data.username}/>
-                    <NoteForm/>
-                    <NotesListView/>
-                    <LogoutButton/>
+                    <UserView username={accountQuery.data.username} />
+                    <NoteForm />
+                    <FetchNotesListView />
+                    <LogoutButton />
                    </Layout>
         case "error":
-            return <AuthForm/>
+            return <AuthForm />
     }
 }
