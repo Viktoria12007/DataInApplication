@@ -1,10 +1,11 @@
 import "./UserView.css";
+import {FC} from "react";
 
 type IUserView = {
     username: string,
 };
 
-export const UserView = ({ username }: IUserView) => {
+export const UserView: FC<IUserView> = ({ username }) => {
   return (
     <div className="user-view">
       <div className="user-view__logo">

@@ -8,10 +8,10 @@ const NoteSchema = z.object({
     userId: z.string(),
     createdAt: z.number(),
 });
-type Note = z.infer<typeof NoteSchema>;
+export type Note = z.infer<typeof NoteSchema>;
 
 const NotesListSchema = z.array(NoteSchema);
-type NotesList = z.infer<typeof NotesListSchema>;
+export type NotesList = z.infer<typeof NotesListSchema>;
 
 const FetchNotesList = z.object({
     list: NotesListSchema,

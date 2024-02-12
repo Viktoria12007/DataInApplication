@@ -15,7 +15,7 @@ export const FetchNotesListView: FC = () => {
         case "pending":
             return <Loader />;
         case "success":
-            return <NotesListView />;
+            return <NotesListView notesList={notesListQuery.data.list} />;
         case "error":
             return <div>
                     <span>Произошла ошибка :(</span>
