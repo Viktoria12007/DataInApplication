@@ -5,5 +5,12 @@
     "text": "Very very large text",
     "userId": "4080a8c6-7f64-4a27-8dbd-85e6c7a15f28",
     "createdAt": 1706119302723
+  },
+  "aeba3951-9eb1-41e7-9179-aa8c7bef2871": {
+    "id": "aeba3951-9eb1-41e7-9179-aa8c7bef2871",
+    "title": "New title",
+    "text": "Waiting for queries to become stale before they are fetched again doesn't always work, especially when you know for a fact that a query's data is out of date because of something the user has done.",
+    "userId": "62070c6d-ceb2-4c6e-bc3d-e2923a4d7364",
+    "createdAt": 1707743932518
   }
 }
