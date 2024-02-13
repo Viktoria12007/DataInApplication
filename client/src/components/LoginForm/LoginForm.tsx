@@ -1,34 +1,42 @@
 import "./LoginForm.css";
 import { FormField } from "../FormField";
 import { Button } from "../Button";
-import {FC, FormEvent, useState} from "react";
+import {FC} from "react";
 import {useMutation} from "@tanstack/react-query";
 import {loginUser} from "../../api/User";
 import {queryClient} from "../../api/queryClient";
+import {z} from "zod";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+
+const LoginSchema = z.object({
+    email: z.string().email('Email должен содержать корректный формат электронной почты'),
+    password: z.string().min(8, 'Пароль должен содержать не менее восьми символов'),
+});
+type LoginForm = z.infer<typeof LoginSchema>;
 
 export const LoginForm: FC = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const { register, handleSubmit, formState: { errors }, reset} = useForm<LoginForm>({
+        resolver: zodResolver(LoginSchema),
+    });
 
     const loginMutation = useMutation({
-        mutationFn: () => loginUser(email, password),
+        mutationFn: loginUser,
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ["me"] });
         },
     }, queryClient);
 
-    function handleSubmit(e: FormEvent) {
-        e.preventDefault();
-        loginMutation.mutate();
-    }
-
   return (
-    <form className="login-form" onSubmit={handleSubmit}>
-      <FormField label="Email">
-        <input value={email} onChange={(e) => setEmail(e.target.value)} />
+    <form className="login-form" onSubmit={handleSubmit((user) => {
+        loginMutation.mutate(user);
+        reset();
+    })}>
+      <FormField label="Email" errorMessage={errors.email?.message}>
+        <input {...register("email")} />
       </FormField>
-      <FormField label="Пароль">
-        <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" />
+      <FormField label="Пароль" errorMessage={errors.password?.message}>
+        <input {...register("password")} type="password" />
       </FormField>
       {loginMutation.error && <span>{loginMutation.error.message}</span>}
       <Button type="submit" isLoading={loginMutation.isPending}>Войти</Button>
