@@ -12,5 +12,103 @@
     "text": "Waiting for queries to become stale before they are fetched again doesn't always work, especially when you know for a fact that a query's data is out of date because of something the user has done.",
     "userId": "62070c6d-ceb2-4c6e-bc3d-e2923a4d7364",
     "createdAt": 1707743932518
+  },
+  "ab971ebc-599b-4479-afd5-62db8de9318d": {
+    "id": "ab971ebc-599b-4479-afd5-62db8de9318d",
+    "title": "New title 2",
+    "text": "Wave your hands in the air and shout hooray because React Query comes with dedicated devtools! 🥳",
+    "userId": "f78a1672-1f20-4e66-885f-c2b38ee94c37",
+    "createdAt": 1707810335732
+  },
+  "17c5230a-b331-4ee2-bdcf-4ff4906e4bad": {
+    "id": "17c5230a-b331-4ee2-bdcf-4ff4906e4bad",
+    "title": "New title 3",
+    "text": "Wave your hands in the air and shout hooray because React Query comes with dedicated devtools! 🥳",
+    "userId": "f78a1672-1f20-4e66-885f-c2b38ee94c37",
+    "createdAt": 1707810349710
+  },
+  "a4fe4542-6e91-496c-9b19-a34e0ab81c92": {
+    "id": "a4fe4542-6e91-496c-9b19-a34e0ab81c92",
+    "title": "New title 4",
+    "text": "Wave your hands in the air and shout hooray because React Query comes with dedicated devtools! 🥳",
+    "userId": "f78a1672-1f20-4e66-885f-c2b38ee94c37",
+    "createdAt": 1707810368750
+  },
+  "40662180-7232-412c-ab38-130563841cdb": {
+    "id": "40662180-7232-412c-ab38-130563841cdb",
+    "title": "New title 5",
+    "text": "Wave your hands in the air and shout hooray because React Query comes with dedicated devtools! 🥳",
+    "userId": "f78a1672-1f20-4e66-885f-c2b38ee94c37",
+    "createdAt": 1707810376303
+  },
+  "8c2a478e-7222-45ed-ae90-b72e07857ae7": {
+    "id": "8c2a478e-7222-45ed-ae90-b72e07857ae7",
+    "title": "New title 6",
+    "text": "Wave your hands in the air and shout hooray because React Query comes with dedicated devtools! 🥳",
+    "userId": "f78a1672-1f20-4e66-885f-c2b38ee94c37",
+    "createdAt": 1707810389125
+  },
+  "bc012dd0-9722-4fd8-8991-d914f0650e7b": {
+    "id": "bc012dd0-9722-4fd8-8991-d914f0650e7b",
+    "title": "New title 7",
+    "text": "Floating Mode will mount the devtools as a fixed, floating element in your app and provide a toggle in the corner of the screen to show and hide the devtools. This toggle state will be stored and remembered in localStorage across reloads.",
+    "userId": "f78a1672-1f20-4e66-885f-c2b38ee94c37",
+    "createdAt": 1707810773197
+  },
+  "8bcf3acd-e86b-4d8b-8c04-e0935ce925ce": {
+    "id": "8bcf3acd-e86b-4d8b-8c04-e0935ce925ce",
+    "title": "New title 8",
+    "text": "Floating Mode will mount the devtools as a fixed, floating element in your app and provide a toggle in the corner of the screen to show and hide the devtools. This toggle state will be stored and remembered in localStorage across reloads.",
+    "userId": "f78a1672-1f20-4e66-885f-c2b38ee94c37",
+    "createdAt": 1707810799165
+  },
+  "f60f6781-2709-42ac-872b-15211adca74e": {
+    "id": "f60f6781-2709-42ac-872b-15211adca74e",
+    "title": "New title 9",
+    "text": "Floating Mode will mount the devtools as a fixed, floating element in your app and provide a toggle in the corner of the screen to show and hide the devtools. This toggle state will be stored and remembered in localStorage across reloads.",
+    "userId": "f78a1672-1f20-4e66-885f-c2b38ee94c37",
+    "createdAt": 1707810806125
+  },
+  "ddf9d34b-94ff-4718-b1a4-db7c63ec8c4c": {
+    "id": "ddf9d34b-94ff-4718-b1a4-db7c63ec8c4c",
+    "title": "New title 10",
+    "text": "Because React Query's fetching mechanisms are agnostically built on Promises, you can use React Query with literally any asynchronous data fetching client, including GraphQL!",
+    "userId": "f78a1672-1f20-4e66-885f-c2b38ee94c37",
+    "createdAt": 1707811196863
+  },
+  "2e087489-bcbc-4e2d-89ce-5c938f500821": {
+    "id": "2e087489-bcbc-4e2d-89ce-5c938f500821",
+    "title": "New title 11",
+    "text": "Functions are the basic building block of any application, whether they’re local functions, imported from another module, or methods on a class. They’re also values, and just like other values, TypeScript has many ways to describe how functions can be called.",
+    "userId": "f78a1672-1f20-4e66-885f-c2b38ee94c37",
+    "createdAt": 1707815961386
+  },
+  "ae06ee91-2eb7-483a-b173-9203d6a24ba0": {
+    "id": "ae06ee91-2eb7-483a-b173-9203d6a24ba0",
+    "title": "New title 12",
+    "text": "The simplest way to describe a function is with a function type expression. These types are syntactically similar to arrow functions:",
+    "userId": "f78a1672-1f20-4e66-885f-c2b38ee94c37",
+    "createdAt": 1707816201975
+  },
+  "588fdc58-2cdf-4eb1-8198-9a2eb7e27f83": {
+    "id": "588fdc58-2cdf-4eb1-8198-9a2eb7e27f83",
+    "title": "New title 13",
+    "text": "Reset the entire form state, fields reference, and subscriptions. There are optional arguments and will allow partial form state reset.",
+    "userId": "f78a1672-1f20-4e66-885f-c2b38ee94c37",
+    "createdAt": 1707828041509
+  },
+  "63f2d315-1c73-4953-8e4a-2a2f5799a999": {
+    "id": "63f2d315-1c73-4953-8e4a-2a2f5799a999",
+    "title": "vsvdsdv",
+    "text": "dvs sdvsdvpldv dvs",
+    "userId": "f78a1672-1f20-4e66-885f-c2b38ee94c37",
+    "createdAt": 1707828076735
+  },
+  "9a74efe8-4528-4b1a-9d6d-0a0f68e11edb": {
+    "id": "9a74efe8-4528-4b1a-9d6d-0a0f68e11edb",
+    "title": "Upsss",
+    "text": "gogogogogogo oggo",
+    "userId": "f78a1672-1f20-4e66-885f-c2b38ee94c37",
+    "createdAt": 1707828586082
   }
 }
