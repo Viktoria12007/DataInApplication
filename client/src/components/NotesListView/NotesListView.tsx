@@ -1,7 +1,6 @@
 import "./NotesListView.css";
 import { NoteView } from "../NoteView";
 import {FC} from "react";
-import {PageSelector} from "../PageSelector";
 import {NotesList} from "../../api/Note";
 
 interface NotesListViewProps {
@@ -10,7 +9,6 @@ interface NotesListViewProps {
 
 export const NotesListView: FC<NotesListViewProps> = ({ notesList }) => {
   return (
-    <div>
       <ul className="note-list-view">
           { notesList.map((note) => {
               return (
@@ -21,7 +19,5 @@ export const NotesListView: FC<NotesListViewProps> = ({ notesList }) => {
               }
           )}
       </ul>
-      <PageSelector />
-    </div>
   );
 };

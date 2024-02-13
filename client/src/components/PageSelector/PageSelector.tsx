@@ -25,7 +25,7 @@ export const PageSelector: FC<IPageSelectorProps> = ({
       >
         {"<"}
       </button>
-      <span className="page-selector__page">{currentPage}</span>
+      <span className="page-selector__page">{currentPage + 1}</span>
 
       <button
         disabled={!canSelectNext}
