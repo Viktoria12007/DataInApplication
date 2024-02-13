@@ -8,25 +8,37 @@ const UserSchema = z.object({
 });
 type User = z.infer<typeof UserSchema>;
 
-export function registerUser(username: string, email: string, password: string): Promise<void> {
+type RegisterUser = {
+    username: string,
+    email: string,
+    password: string,
+}
+
+export function registerUser(user: RegisterUser): Promise<void> {
     return fetch('/api/register', {
         method: 'POST',
         headers: {
             "Content-Type": 'application/json',
         },
-        body: JSON.stringify({ username, email, password }),
+        body: JSON.stringify(user),
     })
         .then(validateResponse)
         .then(() => undefined);
 }
 
-export function loginUser(email: string, password: string): Promise<void> {
+type LoginUser = {
+    username: string,
+    email: string,
+    password: string,
+}
+
+export function loginUser(user: LoginUser): Promise<void> {
     return fetch('/api/login', {
         method: 'POST',
         headers: {
             "Content-Type": 'application/json',
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify(user),
     })
         .then(validateResponse)
         .then(() => undefined);

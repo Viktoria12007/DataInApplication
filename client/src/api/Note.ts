@@ -26,13 +26,18 @@ export function fetchNotesList(): Promise<FetchNotesList> {
         .then((data) => FetchNotesList.parse(data));
 }
 
-export function createNote(title: string, text: string): Promise<void> {
+type NewNote = {
+    title: string,
+    text: string,
+}
+
+export function createNote(newNote: NewNote): Promise<void> {
     return fetch('/api/notes', {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({ title, text }),
+        body: JSON.stringify(newNote),
     })
         .then(validateResponse)
         .then(() => undefined);
